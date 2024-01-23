@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: mrbradleylee
+      url-base: https://github.com/mrbradleylee
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: mrbradleylee
       revision: main
       import: app/west.yml
   self:
