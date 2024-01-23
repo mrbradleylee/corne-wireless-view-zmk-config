@@ -25,6 +25,11 @@
             bindings = <&kp UNDERSCORE>;
             key-positions = <32 33>;
         };
+
+        dw {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <15 2>;
+        };
     };
 
     behaviors {
