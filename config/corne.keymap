@@ -16,19 +16,9 @@
             key-positions = <1 2>;
         };
 
-        caps_word {
-            bindings = <&caps_word>;
-            key-positions = <16 19>;
-        };
-
         under {
             bindings = <&kp UNDERSCORE>;
             key-positions = <32 33>;
-        };
-
-        dw {
-            bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <15 2>;
         };
     };
 
@@ -94,6 +84,13 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <100>;
         };
+
+        caps_word: caps_word {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPS_WORD";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&caps_word>;
+        };
     };
 
     keymap {
@@ -124,10 +121,10 @@
 
             label = "Symbols";
             bindings = <
-&kp GRAVE  &kp EXCLAMATION   &kp AT_SIGN  &kp POUND          &kp DOLLAR  &kp PERCENT    &kp CARET        &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE
-&trans     &kp LG(LA(LEFT))  &trans       &kp LA(LG(RIGHT))  &trans      &trans         &kp QUESTION     &kp KP_MINUS    &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES
-&trans     &trans            &trans       &trans             &trans      &trans         &kp EXCLAMATION  &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
-                                          &trans             &trans      &trans         &trans           &trans          &trans
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT    &kp CARET        &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE
+&trans     &trans           &trans       &trans     &trans      &trans         &kp QUESTION     &kp KP_MINUS    &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES
+&trans     &trans           &trans       &trans     &trans      &trans         &kp EXCLAMATION  &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
+                                         &trans     &trans      &trans         &trans           &trans          &trans
             >;
         };
 
