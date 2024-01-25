@@ -25,6 +25,11 @@
             bindings = <&caps_word>;
             key-positions = <38 39>;
         };
+
+        dw {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <2 15>;
+        };
     };
 
     behaviors {
