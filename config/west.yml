@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: mrbradleylee
-      url-base: https://github.com/mrbradleylee
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
-      remote: mrbradleylee
+      remote: urob
       revision: main-with-native-mouse
       import: app/west.yml
   self:
